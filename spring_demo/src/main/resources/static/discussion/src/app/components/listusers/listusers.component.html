@@ -1,0 +1,31 @@
+<div class="container">
+  <!-- <div [hidden] = "haserror()"> -->
+    <table class ="table table-hover">
+      <thead>
+        <tr style="background: black; -webkit-text-fill-color: white;">
+          <td><h3>Email Id</h3></td>
+          <td><h3>Password</h3></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </thead>
+      <tr *ngFor="let user of users">
+        <td class = {{tablerows[0]}}>{{user.emailId}}</td>
+        <td class = {{tablerows[2]}}>{{user.password}}</td>
+        <td class = {{tablerows[1]}}><input [disabled] = "isLoggedInUser(user.emailId)" (click) = "deleteUser(user.emailId)" class=" button button2 btn btn-danger" type="submit" value="Delete"></td>
+        <td class = {{tablerows[4]}}>
+          <div [hidden] = "isAdmin(user)">
+            <input (click) = "makeAdmin(user.emailId,user)" class="button button2 btn btn-primary" type = "submit" value="Make Admin" >
+          </div>
+          <div [hidden] = "!isAdmin(user)">
+              <span class="badge badge-pill badge-success"><h5>Admin</h5></span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  <!-- </div> -->
+  <!-- <div [hidden] = "!haserror()">
+    <h4>{{error}}</h4>
+    {{pagenotfound()}}
+  </div> -->
+</div>

@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  <!-- <div [hidden] = "!isLogged()" class="container"> -->
+    <br>
+  <div class="container">
+      <input (click) = "logout()" type="submit" class="btn btn-success" value= {{checkLoginButton()}} style = "float:right;">
+      <br>
+      <br>
+      <!-- <div [hidden] = "!isLogged()" >
+          <div class="alert alert-success">
+            You Are Already logged In.
+          </div>
+      </div> -->
+      <br>
+  </div>
+
+<router-outlet></router-outlet>

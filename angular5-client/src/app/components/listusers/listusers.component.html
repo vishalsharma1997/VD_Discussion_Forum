@@ -1,0 +1,21 @@
+<div class="container">
+  <!-- <div [hidden] = "haserror()"> -->
+    <table class ="table table-hover">
+      <thead>
+        <tr style="background: black; -webkit-text-fill-color: white;">
+          <td><h3>Email Id</h3></td>
+          <td><h3>Password</h3></td>
+        </tr>
+      </thead>
+      <tr *ngFor="let user of users">
+        <td class = {{tablerows[0]}}>{{user.emailId}}</td>
+        <td class = {{tablerows[2]}}>{{user.password}}</td>
+        <td><input [disabled] = "isLoggedInUser(user.emailId)" (click) = "deleteUser(user.emailId)" class="btn btn-danger" type="submit" value="Delete"></td>
+      </tr>
+    </table>
+  <!-- </div> -->
+  <!-- <div [hidden] = "!haserror()">
+    <h4>{{error}}</h4>
+    {{pagenotfound()}}
+  </div> -->
+</div>

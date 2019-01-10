@@ -1,0 +1,28 @@
+<div class="container container-fluid round" style="background: bisque;">
+    <h1 style="padding-top:10px;">Add Post</h1>
+    <div [hidden] = "isLoggedIn()" >
+      <div class="alert alert-danger">
+        Please Log in First.
+      </div>
+    </div>
+    <div [hidden] = "!isLoggedIn()">
+      <br>
+      <form (submit)="addPost()">
+        <br>
+                <!-- Fade-In Alert -->
+  
+        <div [hidden] = "!postAdded" class="alert alert-primary">
+            <strong>Success!</strong> Post Added successfully!
+          </div>
+  
+        <div class="form-group">
+            <input class="form-control" name="heading" placeholder="Heading" [(ngModel)]="post.heading">
+        </div>
+        <div class="form-group">
+            <textarea rows="10" class="form-control" name="body" placeholder="Contents" [(ngModel)]="post.body"></textarea>
+        </div>
+        <input class="btn btn-success btn-lg" type="submit" value="Post">
+      </form>
+    </div>
+    <br><br>
+  </div>

@@ -1,0 +1,27 @@
+h1{
+color : blue;
+text-align: center;
+}
+.jumbotron1 {
+    height: 100%;
+  }
+  
+  .jumbotron1 {
+    -webkit-animation: background 5s cubic-bezier(1,0,0,1) infinite;
+    animation: background 5s cubic-bezier(1,0,0,1) infinite;  
+  }
+  
+  
+  @-webkit-keyframes background {
+    0% { background-color: rgb(139, 99, 72); }
+    33% { background-color: rgb(76, 134, 76); }  
+    67% { background-color: rgb(125, 125, 216); }
+    100% { background-color: rgb(182, 106, 106); }
+  }
+  
+  @keyframes background {
+    0% { background-color: rgb(139, 99, 72);; }
+    33% { background-color: rgb(76, 134, 76); }  
+    67% { background-color: rgb(125, 125, 216);}
+    100% { background-color: rgb(182, 106, 106); }
+  }

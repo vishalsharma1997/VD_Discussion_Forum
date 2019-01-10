@@ -1,0 +1,9 @@
+textarea {
+    resize: none;
+  }
+  
+  .round {border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    
+    }

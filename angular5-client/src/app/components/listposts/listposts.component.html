@@ -1,0 +1,70 @@
+<!-- <div [hidden] = "haserror()"> -->
+  <div class="container col-sm-5">
+      <input style="float: right;" type="submit" (click) = "goToAddPost()" class="btn btn-success" value="Add Post">
+
+      <h4 ><b>RECENT POSTS</b></h4>
+  </div>
+
+  <div *ngFor="let post of posts">
+    <div class="container">
+
+      <div class="col-sm-9 round" style="background: rgb(248, 230, 208);">
+        
+          <hr>
+          <input style="float: right;" (click) = "deletePost(post.id)" class="btn btn-danger" type="submit" value="Delete">
+          <h2>{{post.heading}}</h2>
+          <h5><span class="glyphicon glyphicon-time"></span> Posted by {{post.userEmailId}}, <small>{{post.timestamp}}</small>.</h5>
+          <br>
+          <p>{{post.body}}</p>
+          <br><br>
+        <h4>Leave a Comment:</h4>
+        <form role="form">
+          <div class="form-group">
+            <textarea class="form-control" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        <br><br>
+    </div>
+  </div>
+  <br><br>
+  </div>
+<!-- </div> -->
+<!-- <div [hidden] = "!haserror()">
+    <h4>{{error}}</h4>
+    {{pagenotfound()}}
+</div> -->
+
+
+
+
+
+
+
+
+<!-- 
+
+<div class="container">
+    <div class="jumbotron">
+        <table class ="table table-hover">
+          <thead class = "thead-dark">
+            <tr style="background: black; -webkit-text-fill-color: white;">
+                <td><h3>Post Id</h3></td>
+                <td><h3>User Email Id</h3></td>
+                <td><h3>Heading</h3></td>
+                <td><h3>Contents</h3></td>
+                <td><h3>Time</h3></td>
+            </tr>
+          </thead>
+          <tr *ngFor="let post of posts">
+            <td class = {{tablerows[0]}}>{{post.id}}</td>
+            <td class = {{tablerows[1]}}>{{post.userEmailId}}</td>
+            <td class = {{tablerows[2]}}><p>{{post.heading}}</p></td>
+            <td class = {{tablerows[3]}}><p><i>{{post.body}}</i></p></td>
+            <td class = {{tablerows[4]}}>{{post.timestamp}}</td>
+            <td><input (click) = "deletePost(post.id)" class="btn btn-danger" type="submit" value="Delete">
+          </tr>
+        </table>
+      </div>
+</div> -->
+  
